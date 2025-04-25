@@ -9,3 +9,6 @@ nix:
 
 typescript:
 	@bun run scripts/typescript.ts > dist/colorscheme.ts
+
+css:
+	@bun run scripts/css.ts > dist/colorscheme.css
