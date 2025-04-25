@@ -12,3 +12,6 @@ typescript:
 
 css:
 	@bun run scripts/css.ts > dist/colorscheme.css
+
+lua:
+	@bun run scripts/lua.ts > dist/colorscheme.lua
