@@ -5,13 +5,13 @@ on:
     branches:
       - main
     paths:
-      - ".github/workflows/docs.yml"
+      - ".github/workflows/eslint-lint.yml"
       - "eslint.config.mjs"
       - "src/**"
   pull_request:
     branches: ["*"]
     paths:
-      - ".github/workflows/docs.yml"
+      - ".github/workflows/eslint-lint.yml"
       - "eslint.config.mjs"
       - "src/**"
 
