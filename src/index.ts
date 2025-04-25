@@ -1,14 +1,30 @@
 import { lch } from "d3-color";
 import type { IntRange } from "type-fest";
 
+/**
+ * The type of lightness values.
+ *
+ * This value is range from 5 to 95 as number.
+ */
 export type Lightness = IntRange<5, 100, 5>;
+
+/**
+ * The type of hue values.
+ *
+ * This value is range from 0 to 100 as number.
+ */
 export type Hue = IntRange<0, 100>;
 
+/**
+ * The contants value of chroma on lch color spaces.
+ */
 export const CHROMA: number = 60;
-export const LIGHTNESS: Lightness[] = [
-  5, 10, 15, 20, 25, 30, 35, 40, 45, 50, 55, 60, 65, 70, 75, 80, 85, 90, 95,
-] as const;
 
+/**
+ * The enumurate values of colors.
+ *
+ * This value means color index on lch color scpaces.
+ */
 export enum HUE {
   gray = 0,
   red = 9,
@@ -23,9 +39,19 @@ export enum HUE {
   magenta = 94,
 }
 
+/**
+ * Make hexcode of colors by lch color values.
+ *
+ * @param {Hue} hue - the hue value on lch color ring.
+ * @param {Lighness} lightness - the lightness value on lch color.
+ * @returns {string} - the hex code like as `#123abc`.
+ */
 export const toHexCode = (hue: Hue, lightness: Lightness): string =>
   lch(lightness, CHROMA, (360 / 100) * hue).formatHex();
 
+/**
+ * The `gray` hex codes.
+ */
 export const Gray = {
   gray00: "#000000",
   gray05: toHexCode(HUE.gray, 5),
@@ -50,6 +76,9 @@ export const Gray = {
   gray100: "#ffffff",
 } as const;
 
+/**
+ * The `red` hex codes.
+ */
 export const Red = {
   red05: toHexCode(HUE.red, 5),
   red10: toHexCode(HUE.red, 10),
@@ -72,6 +101,9 @@ export const Red = {
   red95: toHexCode(HUE.red, 95),
 } as const;
 
+/**
+ * The `orange` hex codes.
+ */
 export const Orange = {
   orange05: toHexCode(HUE.orange, 5),
   orange10: toHexCode(HUE.orange, 10),
@@ -94,6 +126,9 @@ export const Orange = {
   orange95: toHexCode(HUE.orange, 95),
 } as const;
 
+/**
+ * The `yellow` hex codes.
+ */
 export const Yellow = {
   yellow05: toHexCode(HUE.yellow, 5),
   yellow10: toHexCode(HUE.yellow, 10),
@@ -116,6 +151,9 @@ export const Yellow = {
   yellow95: toHexCode(HUE.yellow, 95),
 } as const;
 
+/**
+ * The `rime` hex codes.
+ */
 export const Rime = {
   rime05: toHexCode(HUE.rime, 5),
   rime10: toHexCode(HUE.rime, 10),
@@ -138,6 +176,9 @@ export const Rime = {
   rime95: toHexCode(HUE.rime, 95),
 } as const;
 
+/**
+ * The `green` hex codes.
+ */
 export const Green = {
   green05: toHexCode(HUE.green, 5),
   green10: toHexCode(HUE.green, 10),
@@ -160,6 +201,9 @@ export const Green = {
   green95: toHexCode(HUE.green, 95),
 } as const;
 
+/**
+ * The `cyan` hex codes.
+ */
 export const Cyan = {
   cyan05: toHexCode(HUE.cyan, 5),
   cyan10: toHexCode(HUE.cyan, 10),
@@ -182,6 +226,9 @@ export const Cyan = {
   cyan95: toHexCode(HUE.cyan, 95),
 } as const;
 
+/**
+ * The `sky` hex codes.
+ */
 export const Sky = {
   sky05: toHexCode(HUE.sky, 5),
   sky10: toHexCode(HUE.sky, 10),
@@ -204,6 +251,9 @@ export const Sky = {
   sky95: toHexCode(HUE.sky, 95),
 } as const;
 
+/**
+ * The `blue` hex codes.
+ */
 export const Blue = {
   blue05: toHexCode(HUE.blue, 5),
   blue10: toHexCode(HUE.blue, 10),
@@ -226,6 +276,9 @@ export const Blue = {
   blue95: toHexCode(HUE.blue, 95),
 } as const;
 
+/**
+ * The `purple` hex codes.
+ */
 export const Purple = {
   purple05: toHexCode(HUE.purple, 5),
   purple10: toHexCode(HUE.purple, 10),
@@ -248,6 +301,9 @@ export const Purple = {
   purple95: toHexCode(HUE.purple, 95),
 } as const;
 
+/**
+ * The `magenta` hex codes.
+ */
 export const Magenta = {
   magenta05: toHexCode(HUE.magenta, 5),
   magenta10: toHexCode(HUE.magenta, 10),
@@ -270,6 +326,9 @@ export const Magenta = {
   magenta95: toHexCode(HUE.magenta, 95),
 } as const;
 
+/**
+ * The all hex codes.
+ */
 export const Colorscheme: Record<string, string> = {
   ...Gray,
   ...Red,
