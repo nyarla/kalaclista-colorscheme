@@ -1,5 +1,5 @@
-import type { IntRange } from "type-fest";
 import { lch } from "d3-color";
+import type { IntRange } from "type-fest";
 
 export type Lightness = IntRange<5, 100, 5>;
 export type Hue = IntRange<0, 100>;
@@ -9,7 +9,7 @@ export const LIGHTNESS: Lightness[] = [
   5, 10, 15, 20, 25, 30, 35, 40, 45, 50, 55, 60, 65, 70, 75, 80, 85, 90, 95,
 ] as const;
 
-export const enum HUE {
+export enum HUE {
   gray = 0,
   red = 9,
   orange = 14,
