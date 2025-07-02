@@ -7,13 +7,17 @@ on:
     paths:
       - ".github/workflows/eslint-lint.yml"
       - "eslint.config.mjs"
+      - "package.json"
       - "src/**"
+      - "tsconfig.json"
   pull_request:
     branches: ["*"]
     paths:
       - ".github/workflows/eslint-lint.yml"
       - "eslint.config.mjs"
+      - "package.json"
       - "src/**"
+      - "tsconfig.json"
 
 jobs:
   eslint:
