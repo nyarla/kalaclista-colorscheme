@@ -6,14 +6,18 @@ on:
       - main
     paths:
       - ".github/workflows/scripts-gen.yml"
+      - "package.json"
       - "scripts/**"
       - "src/**"
+      - "tsconfig.json"
   pull_request:
     branches: ["*"]
     paths:
       - ".github/workflows/scripts-gen.yml"
+      - "package.json"
       - "scripts/**"
       - "src/**"
+      - "tsconfig.json"
 
 jobs:
   biome:
