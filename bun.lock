@@ -14,7 +14,7 @@
         "@typescript-eslint/parser": "^8.43.0",
         "eslint": "^9.35.0",
         "eslint-plugin-jsdoc": "^59.0.2",
-        "type-fest": "^5.0.0",
+        "type-fest": "^5.0.1",
       },
     },
   },
@@ -283,7 +283,7 @@
 
     "type-check": ["type-check@0.4.0", "", { "dependencies": { "prelude-ls": "^1.2.1" } }, "sha512-XleUoc9uwGXqjWwXaUTZAmzMcFZ5858QA2vvx1Ur5xIcixXIP+8LnFDgRplU30us6teqdlskFfu+ae4K79Ooew=="],
 
-    "type-fest": ["type-fest@5.0.0", "", { "dependencies": { "tagged-tag": "^1.0.0" } }, "sha512-GeJop7+u7BYlQ6yQCAY1nBQiRSHR+6OdCEtd8Bwp9a3NK3+fWAVjOaPKJDteB9f6cIJ0wt4IfnScjLG450EpXA=="],
+    "type-fest": ["type-fest@5.0.1", "", { "dependencies": { "tagged-tag": "^1.0.0" } }, "sha512-9MpwAI52m8H6ssA542UxSLnSiSD2dsC3/L85g6hVubLSXd82wdI80eZwTWhdOfN67NlA+D+oipAs1MlcTcu3KA=="],
 
     "typescript": ["typescript@5.8.3", "", { "bin": { "tsc": "bin/tsc", "tsserver": "bin/tsserver" } }, "sha512-p1diW6TqL9L07nNxvRMM7hMMw4c5XOo/1ibL4aAIGmSAt9slTE1Xgw5KWuof2uTOvCg9BY7ZRi+GaF+7sfgPeQ=="],
 
